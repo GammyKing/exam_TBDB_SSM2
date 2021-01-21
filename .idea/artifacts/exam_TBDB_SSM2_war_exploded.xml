@@ -71,6 +71,38 @@
           <element id="file-copy" path="E:/jar/mysql-connector-java-8.0.20.jar" />
           <element id="file-copy" path="E:/jar/taglibs-standard-impl-1.2.1.jar" />
           <element id="file-copy" path="E:/jar/taglibs-standard-spec-1.2.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/SpringMVC_jar/commons-logging-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/SpringMVC_jar/spring-expression-5.2.9.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/SpringMVC_jar/spring-beans-5.2.9.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/SpringMVC_jar/spring-webmvc-5.2.9.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/upload_download_jar/commons-io-1.4.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/upload_download_jar/commons-fileupload-1.2.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/SpringMVC_jar/spring-web-5.2.9.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/SpringMVC_jar/spring-context-5.2.9.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/spring-mabatic_jar/mybatis-spring-1.3.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/SpringMVC_jar/spring-test-5.2.9.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/SpringMVC_jar/spring-aop-5.2.9.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/spring-mabatic_jar/mybatis-3.4.6.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/SpringMVC_jar/spring-core-5.2.9.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/SpringMVC_jar/spring-orm-5.2.9.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/SpringMVC_jar/spring-tx-5.2.9.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/SpringMVC_jar/spring-jdbc-5.2.9.RELEASE.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/pageHelper/pagehelper-5.1.10.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/pageHelper/jsqlparser-2.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/Mybatis_jar/mybatis-3.4.6.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/Mybatis_jar/log4j-1.2.17.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/JSTL_jar/taglibs-standard-spec-1.2.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/JSTL_jar/taglibs-standard-impl-1.2.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/json_jar/fastjson-1.2.75.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/JDBC_jar/mysql-connector-java-5.1.7-bin.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/JDBC_jar/jdbcjar.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/jackson_jar/jackson-databind-2.9.9.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/jackson_jar/jackson-core-2.9.9.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/jackson_jar/jackson-annotations-2.9.9.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/druid_jar/druid-1.1.10.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/aspect_jar/aspectjweaver.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/aspect_jar/aspectjtools.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../../jar/aspect_jar/aspectjrt.jar" />
         </element>
       </element>
     </root>
