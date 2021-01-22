@@ -24,7 +24,7 @@ public class TestPaperController {
 
     @RequestMapping("/selectAllQuestion")
     @ResponseBody
-    public List<Question> selectAllQuestion(@RequestBody User user){
+    public List<Question> selectAllQuestion(User user){
         TestPaperService testPaperService=new TestPaperImpl();
         List<Question> questions = testPaperService.selectAllQuestion(user);
         return questions;

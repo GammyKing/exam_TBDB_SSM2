@@ -6,7 +6,9 @@
 
 <!--    查询所有试题-->
     <select id="selectAllQuestion" parameterType="User" resultType="com.pojo.Question">
-        select type,subject,stem,createtime,score from question_bank where acc=#{User.acc}
+        select id,type,subject,stem,createtime,score from question_bank where acc=#{acc}
     </select>
+
+
 
 </mapper>

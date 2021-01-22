@@ -32,4 +32,8 @@ public interface QuestionDao {
     List<QuestionType> whetherRepeat(QuestionType questionType);
 //    新建题目
     int createNewQuestion(Question question);
+//    修改题目
+    int modifyQuestionContent(Question question);
+//    删除题目
+    int deleteQuestion(Question question);
 }

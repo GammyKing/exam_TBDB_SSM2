@@ -4,6 +4,7 @@ import com.dao.TestPaperDao;
 import com.pojo.Question;
 import com.pojo.User;
 import com.service.TestPaperService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,6 +21,7 @@ import java.util.List;
 @Service
 public class TestPaperImpl implements TestPaperService {
 
+    @Autowired
     TestPaperDao testPaperDao;
 
     //根据用户账号查询所有试题

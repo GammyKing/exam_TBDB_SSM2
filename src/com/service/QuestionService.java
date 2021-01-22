@@ -19,4 +19,8 @@ public interface QuestionService {
     boolean whetherRepeat(QuestionType questionType);
 
     boolean createNewQuestion(Question question);
+
+    boolean modifyQuestionContent(Question question);
+
+    boolean deleteQuestion(Question question);
 }

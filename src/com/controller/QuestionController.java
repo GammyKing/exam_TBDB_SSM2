@@ -5,6 +5,7 @@ import com.pojo.QuestionType;
 import com.pojo.User;
 import com.service.QuestionService;
 import com.service.impl.QuestionServiceImpl;
+import org.aspectj.org.eclipse.jdt.internal.core.search.IRestrictedAccessConstructorRequestor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -66,5 +67,21 @@ public class QuestionController {
     public boolean createNewQuestionController(@RequestBody Question question){
         boolean mark = questionService.createNewQuestion(question);
         return mark;
+    }
+
+//    修改题目
+    @RequestMapping("/modifyQuestionContent")
+    @ResponseBody
+    public boolean modifyQuestionContentController(@RequestBody Question question){
+        boolean result = questionService.modifyQuestionContent(question);
+        return result;
+    }
+
+//    删除题目
+    @RequestMapping("deleteQuestion")
+    @ResponseBody
+    public boolean deleteQuestionController(@RequestBody Question question){
+        boolean result = questionService.deleteQuestion(question);
+        return result;
     }
 }

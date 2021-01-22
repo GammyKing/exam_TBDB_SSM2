@@ -79,7 +79,7 @@ public class QuestionServiceImpl implements QuestionService {
     public boolean whetherRepeat(QuestionType questionType) {
         boolean mark=true;
         List<QuestionType> questionTypes = questionDao.whetherRepeat(questionType);
-        if (questionType!=null){
+        if (questionTypes!=null){
             mark=false;
         }
         return mark;
@@ -98,6 +98,28 @@ public class QuestionServiceImpl implements QuestionService {
             mark=true;
         }
         return mark;
+    }
+
+//    修改题目
+    @Override
+    public boolean modifyQuestionContent(Question question) {
+        boolean result=false;
+        int i = questionDao.modifyQuestionContent(question);
+        if (i>0){
+            result=true;
+        }
+        return result;
+    }
+
+//    删除题目
+    @Override
+    public boolean deleteQuestion(Question question) {
+        boolean result=false;
+        int i = questionDao.deleteQuestion(question);
+        if (i>0){
+            result=true;
+        }
+        return result;
     }
 
 

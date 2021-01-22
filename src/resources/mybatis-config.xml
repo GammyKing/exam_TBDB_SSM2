@@ -30,5 +30,7 @@
 <!--    mapper-->
     <mappers>
         <mapper resource="mapper/usermapper.xml"/>
+        <mapper resource="mapper/questionmapper.xml"/>
+        <mapper resource="mapper/testpapermapper.xml"/>
     </mappers>
 </configuration>
