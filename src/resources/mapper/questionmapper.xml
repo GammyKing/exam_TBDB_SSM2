@@ -34,4 +34,14 @@
     <insert id="createNewQuestion" parameterType="com.pojo.Question">
         insert into question_bank values(#{id},#{type},#{subject},#{stem},#{answer},#{score},#{acc},#{createtime},0)
     </insert>
+
+<!--    数据库中修改题目内容-->
+    <update id="modifyQuestionContent" parameterType="com.pojo.Question">
+        update question_bank set stem=#{stem},answer=#{answer} where id=#{id}
+    </update>
+
+<!--    数据库中删除题目-->
+    <update id="deleteQuestion" parameterType="com.pojo.Question">
+        update question_bank set isdelete=1 where id=#{id}
+    </update>
 </mapper>
