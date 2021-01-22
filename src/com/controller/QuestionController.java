@@ -6,6 +6,7 @@ import com.pojo.User;
 import com.service.QuestionService;
 import com.service.impl.QuestionServiceImpl;
 import org.aspectj.org.eclipse.jdt.internal.core.search.IRestrictedAccessConstructorRequestor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +25,8 @@ import java.util.List;
 
 @Controller
 public class QuestionController {
-    QuestionService questionService =new QuestionServiceImpl();
+    @Autowired
+    QuestionService questionService;
 //    查询所有科目类型,返回值为所有科目组成的集合
     @RequestMapping("/queryAllQuestionType")
     @ResponseBody
