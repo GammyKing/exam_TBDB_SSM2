@@ -17,6 +17,7 @@
         <typeAlias type="com.pojo.Manager" alias="Manager"/>
         <typeAlias type="com.pojo.Paper" alias="Paper"/>
         <typeAlias type="com.pojo.Title" alias="Title"/>
+        <typeAlias type="com.pojo.Score" alias="Score"/>
     </typeAliases>
     <environments default="env">
         <environment id="env">

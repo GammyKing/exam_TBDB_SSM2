@@ -12,6 +12,7 @@ public class Paper {
     private String stem;
     private String answer;
     private String acc;
+    private int Score;
     private String examname;
     private String createtime;
     private String isdelete;
@@ -19,13 +20,14 @@ public class Paper {
     public Paper() {
     }
 
-    public Paper(String id, int type, String subject, String stem, String answer, String acc, String examname, String createtime, String isdelete) {
+    public Paper(String id, int type, String subject, String stem, String answer, String acc, int score, String examname, String createtime, String isdelete) {
         this.id = id;
         this.type = type;
         this.subject = subject;
         this.stem = stem;
         this.answer = answer;
         this.acc = acc;
+        Score = score;
         this.examname = examname;
         this.createtime = createtime;
         this.isdelete = isdelete;
@@ -79,6 +81,14 @@ public class Paper {
         this.acc = acc;
     }
 
+    public int getScore() {
+        return Score;
+    }
+
+    public void setScore(int score) {
+        Score = score;
+    }
+
     public String getExamname() {
         return examname;
     }
@@ -112,6 +122,7 @@ public class Paper {
                 ", stem='" + stem + '\'' +
                 ", answer='" + answer + '\'' +
                 ", acc='" + acc + '\'' +
+                ", Score=" + Score +
                 ", examname='" + examname + '\'' +
                 ", createtime='" + createtime + '\'' +
                 ", isdelete='" + isdelete + '\'' +
