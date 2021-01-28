@@ -11,7 +11,7 @@ package com.pojo;
 
 public class Question {
     private String id;
-    private int type;
+    private String type;
     private String subject;
     private String stem;
     private String answer;
@@ -23,7 +23,7 @@ public class Question {
     public Question() {
     }
 
-    public Question(String id, int type, String subject, String stem, String answer, int score, String acc, String createtime, int isdelete) {
+    public Question(String id, String type, String subject, String stem, String answer, int score, String acc, String createtime, int isdelete) {
         this.id = id;
         this.type = type;
         this.subject = subject;
@@ -43,11 +43,11 @@ public class Question {
         this.id = id;
     }
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(String type) {
         this.type = type;
     }
 

@@ -24,8 +24,6 @@ public interface QuestionDao {
     List<String> queryAllQuestionType(User user);
 //新建科目类型
     int newSubjectType(QuestionType questionType);
-//    修改科目类型
-    int modifySubjectType(Map map);
 //    删除科目类型
     int deleteSubjectType(QuestionType questionType);
 //    是否有重复的科目类型

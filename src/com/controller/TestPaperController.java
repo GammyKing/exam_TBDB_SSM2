@@ -1,9 +1,12 @@
 package com.controller;
 
+import com.alibaba.druid.sql.PagerUtils;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.pojo.Question;
 import com.pojo.User;
 import com.service.TestPaperService;
-import com.service.impl.TestPaperImpl;
+import com.util.PageUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  *功能描述:<br>
@@ -28,8 +32,16 @@ public class TestPaperController {
 
     @RequestMapping("/selectAllQuestion")
     @ResponseBody
-    public List<Question> selectAllQuestion(User user){
+    public PageUtils selectAllQuestion(@RequestBody Map<String,Object> params){
+        String acc = params.get("acc").toString();
+        User user = new User();
+        user.setAcc(acc);
+        PageHelper.offsetPage(Integer.parseInt(params.get("offset").toString()),Integer.parseInt(params.get("pageNumber").toString()));
         List<Question> questions = testPaperService.selectAllQuestion(user);
-        return questions;
+//        System.out.println(acc);
+//        System.out.println(user);
+//        System.out.println("Contorller测试："+questions);
+        PageInfo<Question> pageInfo = new PageInfo<>(questions);
+        return new PageUtils(pageInfo.getList(),new Long(pageInfo.getTotal()).intValue());
     }
 }

@@ -3,6 +3,7 @@ package com.controller;
 import com.pojo.Paper;
 import com.pojo.Title;
 import com.service.PaperService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +18,7 @@ import java.util.List;
  */
 @Controller
 public class PaperController {
+    @Autowired
     PaperService paperService;
 //  删除试题库中的试题
     @RequestMapping(value = "/deleteExam")

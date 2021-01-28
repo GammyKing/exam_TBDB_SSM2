@@ -36,5 +36,6 @@
         <mapper resource="mapper/questionmapper.xml"/>
         <mapper resource="mapper/testpapermapper.xml"/>
         <mapper resource="mapper/papermapper.xml"/>
+        <mapper resource="mapper/TestDao.xml"/>
     </mappers>
 </configuration>

@@ -6,6 +6,7 @@ import com.pojo.Question;
 import com.pojo.Title;
 import com.service.PaperService;
 import com.util.DateFormatUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -19,6 +20,7 @@ import java.util.UUID;
  */
 @Service
 public class PaperServiceImpl implements PaperService {
+    @Autowired
     PaperDao paperDao;
 
     //  删除试题库中的试题

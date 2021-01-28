@@ -12,8 +12,6 @@ public interface QuestionService {
 
     boolean newSubjectType(QuestionType questionType);
 
-    boolean modifySubjectType(String oldType,String acc,String newType);
-
     boolean deleteSubjectType(QuestionType questionType);
 
     boolean whetherRepeat(QuestionType questionType);

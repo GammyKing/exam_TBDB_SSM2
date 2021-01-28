@@ -3,32 +3,32 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.dao.UserDao">
-<!--    登陆账号密码验证，返回对象。-->
+    <!--    登陆账号密码验证，返回对象。-->
     <select id="queryUser" parameterType="User" resultType="User">
-        select acc,pwd from user where acc=#{acc},pwd=#{pwd}
+        select acc,pwd from user where acc=#{acc} and pwd=#{pwd}
     </select>
-<!--    注册信息录入-->
+    <!--    注册信息录入-->
     <insert id="registerUser" parameterType="User">
         insert into user(id,username,pwd,acc,phone,email,createtime,isdelete) values (#{id},#{username},#{pwd},#{acc},#{phone},#{email},#{createtime},#{isdelete})
     </insert>
-<!--    用户查看信息-->
+    <!--    用户查看信息-->
     <select id="CheckInfo" parameterType="User" resultType="User">
         select username,phone,email from user where acc = #{acc}
     </select>
-<!--    用户修改信息-->
+    <!--    用户修改信息-->
     <update id="modifyInfo" parameterType="User">
         update user set username = #{username},phone=#{phone},email=#{email} where acc=#{acc}
     </update>
-<!--    用户信息修改后回显-->
+    <!--    用户信息修改后回显-->
     <select id="modifyInfoSelect" parameterType="string" resultType="User">
-        select username,phone,email from user where acc=#{value}
+        select username,phone,email from user where acc=#{acc}
     </select>
-
+    <!--    修改密码-->
     <update id="modifyPwd" parameterType="User">
-        update user set pwd = #{pwd} where email = #{email}
+        update user set pwd = #{pwd} where acc = #{acc} and email=#{email}
     </update>
-<!--    忘记密码，先验证账号存在，后修改密码-->
+    <!--    忘记密码，先验证账号存在，后修改密码-->
     <select id="forgetSelectUser" parameterType="User" resultType="User">
-        select * from user where email = #{email},acc=#{acc}
+        select * from user where email = #{email} and acc=#{acc}
     </select>
 </mapper>

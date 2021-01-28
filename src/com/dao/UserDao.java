@@ -11,10 +11,16 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface UserDao {
     User queryUser(User user);
+
     int registerUser(User user);
+
     User CheckInfo(User user);
+
     int modifyInfo(User user);
+
     User modifyInfoSelect(User user);
+
     int modifyPwd(User user);
+
     User forgetSelectUser(User user);
 }

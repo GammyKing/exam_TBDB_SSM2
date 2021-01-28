@@ -27,8 +27,7 @@ public class TestPaperImpl implements TestPaperService {
     //根据用户账号查询所有试题
     @Override
     public List<Question> selectAllQuestion(User user) {
-        List<Question> questions = testPaperDao.selectAllQuestion(user);
-        return questions;
+        return testPaperDao.selectAllQuestion(user);
     }
 
 

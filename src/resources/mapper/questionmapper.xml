@@ -14,23 +14,16 @@
 
     <!--    在数据库中新添加科目类型-->
     <insert id="newSubjectType" parameterType="com.pojo.QuestionType">
-        insert into question_type(id, subject, acc, createriem, isdelete)
+        insert into question_type(id, subject, acc, createtime, isdelete)
         values (#{id}, #{subject}, #{acc}, #{createtime}, #{isdelete})
     </insert>
 
-    <!--    在数据库中修改科目类型-->
-    <update id="modifySubjectType" parameterType="map">
-        update question_type
-        set subject=#{newType}
-        where acc = #{acc}
-          and subject = #{oldType}
-    </update>
 
     <!--    在数据库中删除科目类型-->
     <update id="deleteSubjectType" parameterType="com.pojo.QuestionType">
         update question_type
         set isdelete=1
-        where acc = #{}
+        where acc = #{acc}
           and subject = #{subject}
     </update>
 
@@ -46,7 +39,7 @@
 
     <!--    数据库中新建题目-->
     <insert id="createNewQuestion" parameterType="com.pojo.Question">
-        insert into question_bank
+        insert into question_bank(id,type,subject,stem,answer,score,acc,createtime,isdelete)
         values (#{id}, #{type}, #{subject}, #{stem}, #{answer}, #{score}, #{acc}, #{createtime}, 0)
     </insert>
 

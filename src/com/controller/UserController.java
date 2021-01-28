@@ -17,46 +17,50 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class UserController {
     @Autowired
     UserService userService;
-//    前端传参acc,pwd    返回一个boolean参数 result   ajax提交
+
+    //    前端传参acc,pwd    返回一个boolean参数 result   ajax提交
 //    登陆验证
     @RequestMapping(value = "/login")
     @ResponseBody
-    public boolean login(@RequestBody User user){
+    public boolean login(@RequestBody User user) {
         return userService.checkLogin(user);
     }
 
-//      前端传参为user对象的所有信息
+    //      前端传参为user对象的所有信息
 //    注册入库
     @RequestMapping(value = "/register")
     @ResponseBody
-    public boolean register(@RequestBody User user){
+    public boolean register(@RequestBody User user) {
         return userService.register(user);
     }
 
 
-//  用户查看信息
+    //  用户查看信息
     @RequestMapping(value = "/userCheckInfo")
     @ResponseBody
-    public User userCheckInfo(@RequestBody User user){
+    public User userCheckInfo(@RequestBody User user) {
         return userService.userCheckInfo(user);
 
     }
-//    用户修改信息
+
+    //    用户修改信息
     @RequestMapping(value = "/userModifyInfo")
     @ResponseBody
-    public User userModifyInfo(@RequestBody User user){
+    public User userModifyInfo(@RequestBody User user) {
         return userService.modifyInfo(user);
     }
-//  用户修改密码
+
+    //  用户修改密码
     @RequestMapping(value = "/modifyPassword")
     @ResponseBody
-    public boolean modifyPassword(User user){
+    public boolean modifyPassword(@RequestBody User user) {
         return userService.modifyPwd(user);
     }
+
     //    忘记密码
     @RequestMapping(value = "/forgetPassword")
     @ResponseBody
-    public boolean forgetPassword(@RequestBody User user){
+    public boolean forgetPassword(@RequestBody User user) {
         return userService.forgetPwd(user);
     }
 }

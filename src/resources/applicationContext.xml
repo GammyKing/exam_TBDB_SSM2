@@ -92,7 +92,6 @@
         <property name="filters" value="stat,wall" />
     </bean>
 
-
     <!-- Mybatis setting配置-->
     <bean id="setting" class="org.apache.ibatis.session.Configuration">
         <property name="mapUnderscoreToCamelCase" value="true"/>

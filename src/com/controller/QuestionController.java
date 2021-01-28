@@ -4,15 +4,15 @@ import com.pojo.Question;
 import com.pojo.QuestionType;
 import com.pojo.User;
 import com.service.QuestionService;
-import com.service.impl.QuestionServiceImpl;
-import org.aspectj.org.eclipse.jdt.internal.core.search.IRestrictedAccessConstructorRequestor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 /**
  *功能描述:<br>
@@ -31,8 +31,9 @@ public class QuestionController {
     @RequestMapping("/queryAllQuestionType")
     @ResponseBody
     public List<String> queryAllQuestionTypeController(@RequestBody User user){
-        List<String> strings = questionService.queryAllQuestionType(user);
-        return strings;
+        return questionService.queryAllQuestionType(user);
+
+
     }
 
 //    新建科目类型
@@ -47,43 +48,32 @@ public class QuestionController {
         return result;
     }
 
-//    修改科目类型
-    @RequestMapping("/modifySubjectType")
-    @ResponseBody
-    public boolean modifySubjectTypeController(String oldType,String acc,String newType){
-        boolean result = questionService.modifySubjectType(oldType, acc, newType);
-        return result;
-    }
-
 //    删除科目类型
     @RequestMapping("/deleteSubjectType")
     @ResponseBody
     public boolean deleteSubjectTypeController(@RequestBody QuestionType questionType){
-        boolean result = questionService.deleteSubjectType(questionType);
-        return result;
+        System.out.println("Controller:"+questionType);
+        return questionService.deleteSubjectType(questionType);
     }
 
 //    新建题目
     @RequestMapping("/createNewQuestion")
     @ResponseBody
     public boolean createNewQuestionController(@RequestBody Question question){
-        boolean mark = questionService.createNewQuestion(question);
-        return mark;
+        return questionService.createNewQuestion(question);
     }
 
 //    修改题目
     @RequestMapping("/modifyQuestionContent")
     @ResponseBody
     public boolean modifyQuestionContentController(@RequestBody Question question){
-        boolean result = questionService.modifyQuestionContent(question);
-        return result;
+        return questionService.modifyQuestionContent(question);
     }
 
 //    删除题目
     @RequestMapping("deleteQuestion")
     @ResponseBody
     public boolean deleteQuestionController(@RequestBody Question question){
-        boolean result = questionService.deleteQuestion(question);
-        return result;
+        return questionService.deleteQuestion(question);
     }
 }

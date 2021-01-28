@@ -6,6 +6,7 @@ import com.pojo.Score;
 import com.pojo.Title;
 import com.service.TestService;
 import com.util.DateFormatUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -21,6 +22,7 @@ import java.util.UUID;
  */
 @Service
 public class TestServiceImpl implements TestService {
+    @Autowired
     TestDao examDao;
 
     //  答案检查 用集合返回答案。
